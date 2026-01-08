@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="student.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <h2>College Attendance System</h2>
+    <button id="logoutBtn">Logout</button>
+  </header>
+
+  <!-- MAIN -->
+  <div class="container">
+
+    <!-- PROFILE CARD -->
+    <div class="card profile-card">
+      <h3 id="studentEmail">Student</h3>
+      <p id="studentInfo"></p>
+      <h1 id="overallAttendance">0%</h1>
+      <span>Overall Attendance</span>
+    </div>
+
+    <!-- SUBJECT TABLE -->
+    <div class="card table-card">
+      <h3>Subject-wise Attendance</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Total</th>
+            <th>Present</th>
+            <th>%</th>
+          </tr>
+        </thead>
+        <tbody id="subjectTable"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script type="module" src="student.js"></script>
+</body>
+</html>

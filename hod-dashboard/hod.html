@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HOD Attendance Dashboard</title>
+  <link rel="stylesheet" href="hod.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-left">
+    <h2>HOD Dashboard</h2>
+    <span class="sub">Attendance Management</span>
+  </div>
+  <button id="logoutBtn" class="logout-btn">Logout</button>
+</header>
+
+<div class="page">
+
+  <!-- INFO CARD -->
+  <div class="info-card">
+    <div>
+      <h3 id="hodEmail"></h3>
+      <p id="hodDept"></p>
+    </div>
+
+    <div class="filter-box">
+      <label>Filter by Section</label>
+      <select id="sectionFilter">
+        <option value="ALL">All Sections</option>
+        <option value="A">Section A</option>
+        <option value="B">Section B</option>
+        <option value="C">Section C</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- OVERALL -->
+  <div class="card highlight">
+    <h3 id="overallAttendance"></h3>
+  </div>
+
+  <!-- SUBJECT TABLE -->
+  <div class="card">
+    <h3>Subject-wise Attendance</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Total</th>
+          <th>Present</th>
+          <th>%</th>
+        </tr>
+      </thead>
+      <tbody id="subjectTable"></tbody>
+    </table>
+  </div>
+
+  <!-- STUDENTS TABLE -->
+  <div class="card">
+    <h3>All Students Attendance</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Student Email</th>
+          <th>%</th>
+        </tr>
+      </thead>
+      <tbody id="allStudentsTable"></tbody>
+    </table>
+  </div>
+
+  <!-- LOW ATTENDANCE -->
+  <div class="card danger-card">
+    <h3>Low Attendance Students (&lt; 75%)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Student Email</th>
+          <th>%</th>
+        </tr>
+      </thead>
+      <tbody id="lowAttendanceTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script type="module" src="hod.js"></script>
+</body>
+</html>

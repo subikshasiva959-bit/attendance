@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h2>Admin Dashboard</h2>
+
+  <div class="filters">
+    <select id="departmentFilter">
+      <option value="ALL">All Departments</option>
+      <option value="CSE">CSE</option>
+      <option value="IT">IT</option>
+    </select>
+
+    <select id="sectionFilter">
+      <option value="ALL">All Sections</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+      <option value="C">C</option>
+    </select>
+
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="overall-card" id="overallAttendance">
+    Overall Attendance: 0%
+  </div>
+
+  <div class="card">
+    <h3>Subject-wise Attendance</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Total</th>
+          <th>Present</th>
+          <th>%</th>
+        </tr>
+      </thead>
+      <tbody id="subjectTable"></tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>All Students Attendance</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Department</th>
+          <th>Section</th>
+          <th>%</th>
+        </tr>
+      </thead>
+      <tbody id="studentTable"></tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Low Attendance Students (&lt; 75%)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Department</th>
+          <th>Section</th>
+          <th>%</th>
+        </tr>
+      </thead>
+      <tbody id="lowAttendanceTable"></tbody>
+    </table>
+  </div>
+
+</div>
+
+<script type="module" src="admin.js"></script>
+</body>
+</html>

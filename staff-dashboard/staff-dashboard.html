@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Staff Dashboard</title>
+  <link rel="stylesheet" href="./staff-dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+<script type="module" src="./staff-dashboard.js"></script>
+
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <h2>Staff Dashboard</h2>
+  <button id="exportExcel" class="primary-btn">
+  Export Attendance (Excel)
+</button>
+
+  <button id="logoutBtn" class="logout-btn">Logout</button>
+</header>
+
+<div class="container">
+
+  <!-- STAFF INFO -->
+  <div class="card">
+    <h3 id="staffEmail">Loading...</h3>
+    <p id="staffDept"></p>
+    <p id="staffSections"></p>
+  </div>
+
+  <!-- MARK ATTENDANCE -->
+  <div class="card">
+    <h3>Mark Attendance</h3>
+
+    <div class="form-row">
+      <div>
+        <label>Date</label>
+        <input type="date" id="date">
+      </div>
+
+      <div>
+        <label>Subject</label>
+        <select id="subject">
+          <option value="DBMS">DBMS</option>
+          <option value="AIML">AIML</option>
+          <option value="OS">OS</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Section</label>
+        <select id="section">
+          <option value="">Select Section</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+      </div>
+    </div>
+
+    <label>Students</label>
+    <div id="studentList" class="student-box">
+      <p class="muted">Select section to load students</p>
+    </div>
+
+    <button id="submitAttendance" class="primary-btn">
+      Submit Attendance
+    </button>
+  </div>
+
+</div>
+
+<script type="module" src="./staff-dashboard.js"></script>
+</body>
+</html>
